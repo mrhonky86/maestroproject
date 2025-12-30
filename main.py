@@ -1,5 +1,14 @@
-# --- SHARED STATE ---
-player = {"name": "", "inventory": [], "logic": 5}
+# --- SHARED STATE (The Global Database) ---
+player = {
+    "name": "",
+    "inventory": [],
+    "logic": 5,
+    # Hidden Room Progress
+    "found_secret_passage": False, 
+    "barrier_deactivated": False,
+    "safe_cracked": False
+}
+
 
 # --- START ENGINE ---
 def start_game():
