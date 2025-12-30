@@ -1,19 +1,37 @@
-# --- GLOBAL STATE (The AI Game Master's Database) ---
-player = {
-    "name": "",
-    "logic_points": 5,
-    "inventory": ["Battered Keyboard"],
-    "current_floor": 1
-}
+# --- SHARED STATE ---
+player = {"name": "", "inventory": [], "logic": 5}
 
-# --- THE ENGINE ---
+# --- START ENGINE ---
 def start_game():
-    print("--- WELCOME TO THE MAESTRO WORLD DUNGEON ---")
-    player["name"] = input("Enter your username, Crawler: ")
-    print(f"\nAI Voice: 'Greetings, {player['name']}. You have been flattened into Python code.'")
-    dungeon_entrance() # This will call the first room
+    player["name"] = input("Crawler, identify yourself: ")
+    dungeon_entrance()
 
-# --- YOUR ROOMS WILL GO BELOW THIS LINE ---
+# --- THE MAP (Students will replace these) ---
+
 def dungeon_entrance():
-    print("\nYou are in the Syntax Pit. Green code drips from the ceiling.")
-    # More logic will go here once others contribute!
+    print("\nYou are at the entrance. A sign reads: 'Abandon all hope, ye who forget semicolons.'")
+    choice = input("Do you [enter] the Terminal? ")
+    if "enter" in choice.lower():
+        the_terminal()
+    else:
+        dungeon_entrance()
+
+def the_terminal():
+    print("\n[ROOM NOT BUILT YET]")
+    # Student assigned to 'the_terminal' will replace this entire function!
+    the_breakroom() 
+
+def the_breakroom():
+    print("\n[ROOM NOT BUILT YET]")
+    coffee_grotto()
+
+def coffee_grotto():
+    print("\n[ROOM NOT BUILT YET]")
+    infinite_loop()
+
+def infinite_loop():
+    print("\n[ROOM NOT BUILT YET]")
+    print("GAME OVER: You haven't built the boss yet!")
+
+if __name__ == "__main__":
+    start_game()
